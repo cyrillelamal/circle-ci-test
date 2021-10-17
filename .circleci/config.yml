@@ -14,21 +14,9 @@ jobs:
               mbstring \
               pdo \
               pdo_sqlite
-        #    steps:
-        #      - checkout
-        #      - run:
-        #          name: Satisfy Server Requirements
-        #          command: |
-        #            apt-get update \
-        #            && apt-get install -y libonig-dev \
-        #            && docker-php-ext-install \
-        #              mbstring \
-        #              pdo \
-        #              pdo_sqlite
-        #      - run:
-        #          name: Install Dependencies
-        #          command: |
-        #            composer install -o
+      - run:
+          name: Install Dependencies
+          command: composer install && composer dump-autoload --optimize
         #      -run:
         #        name: Preapre Database
         #        command: |
