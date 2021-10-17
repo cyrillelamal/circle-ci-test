@@ -4,3 +4,6 @@ Homestead.json
 Homestead.yaml
 .env
 .phpunit.result.cache
+/public/mix-manifest.json
+/public/css/
+/public/js/

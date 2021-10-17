@@ -16,7 +16,9 @@ jobs:
               pdo_sqlite
       - run:
           name: Install Dependencies
-          command: composer install && composer dump-autoload --optimize
+          command: |
+            composer install && composer dump-autoload --optimize
+            yarn install && yarn run prod
       - run:
           name: Prepare Database
           command: touch database/database.sqlite && php artisan migrate --env=testing --database=sqlite --force
