@@ -8,8 +8,8 @@ jobs:
       - run:
           name: Satisfy Server Requirements
           command: |
-            apt-get update
-            docker-php-ext-install \
+            sudo apt-get update
+            sudo docker-php-ext-install \
               mbstring \
               pdo \
               pdo_sqlite
