@@ -17,13 +17,9 @@ jobs:
       - run:
           name: Install Dependencies
           command: composer install && composer dump-autoload --optimize
-      -run:
+      - run:
           name: Prepare Database
           command: touch database/database.sqlite && php artisan migrate --env=testing --database=sqlite
-        #      -run:
-        #        name: Preapre Database
-        #        command: |
-        #          touch ./storage/app/testing.sqlite && php ./artisan migrate --env=testing --database=sqlite_testing
         #      - run:
         #        name: Run Tests
         #        command: |
