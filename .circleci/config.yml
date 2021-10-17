@@ -6,8 +6,13 @@ jobs:
     steps:
       - checkout
       - run:
-          name: Hello World
-          command: echo 'Salut !'
+          name: Satisfy Server Requirements
+          command: |
+            apt-get update
+            docker-php-ext-install \
+              mbstring \
+              pdo \
+              pdo_sqlite
         #    steps:
         #      - checkout
         #      - run:
